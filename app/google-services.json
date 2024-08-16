@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "15864470692",
+    "project_id": "agro-sewa",
+    "storage_bucket": "agro-sewa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15864470692:android:29b893adbf5b30885ada31",
+        "android_client_info": {
+          "package_name": "com.example.nafis.agrosewa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrwPua20HDzXNaCl2nRQn6whEUe1-gH00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

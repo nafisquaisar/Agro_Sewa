@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <item android:id="@+id/home"
+       android:icon="@drawable/home"
+       android:title="Home" />
+
+    <item android:id="@+id/shop"
+       android:icon="@drawable/shop"
+       android:title="Agro Shop"
+        />
+
+    <item android:id="@+id/placeholder"
+          android:title=""
+        />
+    <item android:id="@+id/commubnity"
+       android:icon="@drawable/community"
+       android:title="Community" />
+
+    <item android:id="@+id/profile"
+       android:icon="@drawable/bottomprofile"
+       android:title="Profile" />
+</menu>

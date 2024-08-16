@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:theme="@style/Theme.MaterialComponents"
+    tools:context=".Home">
+
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+
+       >
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/constraintLayout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/topbg"
+           android:gravity="center"
+           android:orientation="horizontal"
+           android:padding="@dimen/_10sdp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent">
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:gravity="center"
+               android:orientation="horizontal"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent">
+
+               <ImageView
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:scaleType="centerCrop"
+                   android:src="@drawable/logoplant" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Hey,"
+
+                   android:layout_marginEnd="5dp"
+                   android:textSize="@dimen/_17sdp"
+                   android:textStyle="bold" />
+               <TextView
+                   android:id="@+id/homeNameTop"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="User"
+                   android:textSize="@dimen/_17sdp"
+                   android:textStyle="bold" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/linearLayout2"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:orientation="horizontal"
+               android:padding="@dimen/_10sdp"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent">
+
+               <LinearLayout
+                   android:layout_width="80dp"
+                   android:layout_height="50dp"
+                   >
+                   <com.airbnb.lottie.LottieAnimationView
+                       android:id="@+id/chatbot"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintVertical_bias="0.065"
+                       app:lottie_autoPlay="true"
+                       app:lottie_loop="true"
+                       android:scaleType="centerCrop"
+                       app:lottie_url="https://lottie.host/81636741-31ae-4fbe-9a14-5a7bacdae598/J8qAkXLKfO.json" />
+
+               </LinearLayout>
+
+
+               <ImageView
+                   android:id="@+id/notification"
+                   android:layout_width="35dp"
+                   android:layout_height="35dp"
+                   android:layout_gravity="center_vertical"
+
+                   android:scaleType="centerCrop"
+                   android:src="@drawable/_6_notification" />
+
+               <ImageView
+                   android:id="@+id/setting"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:layout_gravity="center_vertical"
+                   android:layout_marginStart="@dimen/_5sdp"
+                   android:scaleType="centerCrop"
+                   android:src="@drawable/_4_setting" />
+
+           </LinearLayout>
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+       <FrameLayout
+           android:id="@+id/fragment"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.0"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+           app:layout_constraintVertical_bias="0.0" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- Bottom App Bar -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/secondarygreen"
+        app:fabCradleMargin="10dp"
+        app:fabCradleVerticalOffset="0dp"
+        app:fabCradleRoundedCornerRadius="30dp"
+        android:layout_gravity="bottom">
+
+        <!-- Bottom Navigation View inside Bottom App Bar -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/transparent_background"
+            app:itemIconTint="@color/white"
+            app:itemTextAppearanceActive="@color/secondaryDeepGreen"
+            app:itemTextAppearanceActiveBoldEnabled="true"
+            app:itemActiveIndicatorStyle="@color/white"
+
+
+            app:itemTextAppearanceInactive="@color/white"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/menu" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/scannerbg"
+        app:fabSize="auto"
+        android:backgroundTint="@color/secondaryDeepGreen"
+        app:layout_anchor="@id/bottomAppBar" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

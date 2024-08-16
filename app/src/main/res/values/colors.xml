@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="primarygreen">#32704E</color>
+    <color name="secondarygreen">#528B6B</color>
+    <color name="daekgreen">#015F2C</color>
+    <color name="bgshopgreen">#7D32704E</color>
+
+    <color name="secondarydeepgreen">#839F90</color>
+    <color name="secondaryDeepGreen">#C7D2CC</color>
+    <color name="primarygrey">#D9D9D9</color>
+
+
+
+</resources>

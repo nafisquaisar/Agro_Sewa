@@ -1,0 +1,144 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:layout_marginBottom="8dp">
+
+        <!-- User Profile Picture -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/profile"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop" />
+
+        <!-- User Name -->
+        <TextView
+            android:id="@+id/userNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/profileImageView"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/profileImageView"
+            android:text="Amanda Haydenson"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Time Posted -->
+        <TextView
+            android:id="@+id/timePostedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 hour ago"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_toEndOf="@id/userNameTextView"
+            android:layout_alignTop="@id/userNameTextView" />
+
+        <!-- Comment Text -->
+        <TextView
+            android:id="@+id/commentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userNameTextView"
+            android:layout_marginStart="-32dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/profileImageView"
+            android:text="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document @hughgrant"
+            android:textSize="14sp" />
+
+        <!-- Emoji and Like Section -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/commentTextView"
+            android:layout_marginStart="-25dp"
+            android:layout_marginTop="14dp"
+            android:layout_toEndOf="@id/profileImageView"
+            android:orientation="horizontal">
+
+            <!-- Emoji Icon -->
+            <ImageView
+                android:id="@+id/likeIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/afterlike" />
+
+            <!-- Like Count -->
+            <TextView
+                android:id="@+id/likeCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="16dp"
+                android:text="1" />
+
+            <!-- Like Icon -->
+            <ImageView
+                android:id="@+id/dislikeIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/afterdislike" />
+
+            <!-- Like Count -->
+            <TextView
+                android:id="@+id/dislikeCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/commentreply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:text="Reply" />
+        </LinearLayout>
+
+        <!-- Options Menu (3 dots) -->
+        <ImageView
+            android:id="@+id/optionsMenu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/moreoption"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="5dp"
+            android:visibility="gone"
+            android:background="#DADADA"
+            android:padding="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/optionsMenu"
+            android:layout_toEndOf="@+id/timePostedTextView"
+            android:text="Delete" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/commentTextView"
+            android:layout_marginTop="49dp"
+            android:background="?android:attr/listDivider" />
+    </RelativeLayout>
+</layout>

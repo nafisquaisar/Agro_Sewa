@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_180sdp"
+        android:layout_margin="@dimen/_15sdp"
+        app:cardCornerRadius="@dimen/_9sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/primarygrey"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bgshopgreen"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/shopimg"
+                    android:layout_width="155dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/seller" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/shopname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kishan Shop"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/shopcity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bhopal" />
+
+                <TextView
+                    android:id="@+id/shopdistance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 km away" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/primarygrey"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_160sdp">
+
+                <ImageView
+                    android:id="@+id/defecttedImgUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/damageplant"
+                    android:scaleType="centerCrop" />
+
+                <!--            ===============photo upload section=============-->
+            </LinearLayout>
+
+            <!--        =================user detail section===============-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--            // profile photo-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/communityProfile"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:src="@drawable/profile"
+                        android:layout_margin="@dimen/_10sdp" />
+                </LinearLayout>
+                <!--            date and time -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:id="@+id/communityName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="Name"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_20sdp" />
+
+                        <!-- Options Menu (3 dots) -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            >
+                            <TextView
+                                android:id="@+id/communitydeletevtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginEnd="5dp"
+                                android:visibility="gone"
+                                android:background="@color/white"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_toStartOf="@+id/optionsMenu"
+                                android:text="Delete" />
+
+                            <ImageView
+                                android:id="@+id/deleteoptionsMenu"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/moreoption"
+                                />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/communityDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12 July 2024"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:id="@+id/communitytime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="11:20 PM"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:textSize="@dimen/_10sdp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--        ============plant detail section===============-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/communityTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_20sdp"
+                    android:textColor="@color/black"
+                    android:text="What is this problem?" />
+
+                <TextView
+                    android:id="@+id/communityDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:text="Apple scab, also known as black spot, is a common \n disease that affects apples and other trees. \nIt's caused by the fungus Venturia inaequalis, which spreads through airborne spores and can survive the winter on fallen leaves." />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/straightline"
+                android:layout_marginTop="@dimen/_10sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/coummunitylikebtn"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/afterlike"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/coummunitylikeview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp" />
+
+                <ImageView
+                    android:id="@+id/coummunitydislikebtn"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/afterdislike"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_20sdp" />
+
+                <TextView
+                    android:id="@+id/coummunitydislikeview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp" />
+                <ImageView
+                    android:id="@+id/commentbtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:src="@drawable/comments"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
